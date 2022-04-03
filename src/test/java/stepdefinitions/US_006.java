@@ -2,7 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import pages.EmrePage;
+import pages.*;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -16,6 +16,7 @@ public class US_006 {
         Assert.assertTrue(emrePage.welcomeToMedunna.isEnabled());
 
     }
+
 
     @Given("EG Kullanici Account Menu ikonuna tiklar")
     public void eg_kullanici_account_menu_ikonuna_tiklar() {

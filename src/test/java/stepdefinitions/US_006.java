@@ -11,8 +11,9 @@ public class US_006 {
     EmrePage emrePage;
     @Given("EG Kullanici medunna.com adresine gider")
     public void eg_kullanici_medunna_com_adresine_gider() {
-        emrePage= new EmrePage();
+
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
+        emrePage= new EmrePage();
         Assert.assertTrue(emrePage.welcomeToMedunna.isEnabled());
 
     }
@@ -85,6 +86,6 @@ public class US_006 {
     }
     @Given("EG kullanici uygulamayi kapatir")
     public void eg_kullanici_uygulamayi_kapatir() {
-    Driver.getDriver().quit();
+    Driver.getDriver().close();
     }
 }

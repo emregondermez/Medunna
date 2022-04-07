@@ -68,7 +68,7 @@ public class US_006 {
     @Given("EG Firstname kutusundaki isim kayit olurken girilen {string} olmali")
     public void eg_firstname_kutusundaki_isim_kayit_olurken_girilen_olmali(String firstname) {
         emrePage= new EmrePage();
-        String actualFirstname= emrePage.settingsFirstnameTextBox.getText();
+        String actualFirstname= emrePage.settingsFirstnameTextBox.getAttribute("value");
         System.out.println(actualFirstname);
         Assert.assertEquals(actualFirstname,firstname);
     }
@@ -86,6 +86,6 @@ public class US_006 {
     }
     @Given("EG kullanici uygulamayi kapatir")
     public void eg_kullanici_uygulamayi_kapatir() {
-    Driver.getDriver().close();
+    Driver.closeDriver();
     }
 }

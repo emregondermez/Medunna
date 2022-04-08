@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class EmrePage {
 
-    //Emre Bey
+
 
   public EmrePage(){
         PageFactory.initElements(Driver.getDriver(),this);

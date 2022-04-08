@@ -13,22 +13,19 @@ Feature:06_TC_01_Kullanıcı bilgileri
     And EG Kullanici sag ust kosede bulunan kullanici ismine tiklar
     And EG Kullanici settings secenigine tiklar
     And EG Firstname kutusundaki isim kayit olurken girilen "<firstname>" olmali
-
-
+    And EG last name  kutusundaki soy isim kayit olurken girilen "<lastname>" olmali
     And EG kullanici uygulamayi kapatir
 
 
 
     Examples:test_data
-  |username|password|firstname|
-  |DoctorEmr |Asdf1!|Doctor |
+  |username|password|firstname|lastname|
 
-  #|AdminEmr|Asdf1!|
-  #|UserEmr|Asdf1!|
- # |PatientEmr|Asdf1!|
- # |StaffEmr|Asdf1!|
-
-
+  |UserEmr|Asdf1!|User      |Emr       |
+ |PatientEmr|Asdf1!|Patient|Emr       |
+ |StaffEmr|Asdf1!|Staff    |Emr       |
+  |DoctorEmr |Asdf1!|Doctor |Emr       |
+  |AdminEmr|Asdf1!|Admin    |Emr       |
 
 
 

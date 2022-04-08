@@ -75,13 +75,13 @@ public class US_006 {
     @Given("EG last name  kutusundaki soy isim kayit olurken girilen {string} olmali")
     public void eg_last_name_kutusundaki_soy_isim_kayit_olurken_girilen_olmali(String lastname) {
         emrePage= new EmrePage();
-        String actualLastname = emrePage.settingsLastnameTextBox.getText();
+        String actualLastname = emrePage.settingsLastnameTextBox.getAttribute("value");
     Assert.assertEquals(actualLastname,lastname);
     }
     @Given("EG email kutusundaki mail adresi  kayit olurken girilen {string} olmali")
     public void eg_email_kutusundaki_mail_adresi_kayit_olurken_girilen_olmali(String email) {
         emrePage= new EmrePage();
-        String actualEmail= emrePage.settingsEmailTextBox.getText();
+        String actualEmail= emrePage.settingsEmailTextBox.getAttribute("value");
     Assert.assertEquals(actualEmail,email);
     }
     @Given("EG kullanici uygulamayi kapatir")

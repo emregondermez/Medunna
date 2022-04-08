@@ -125,4 +125,11 @@ public class US_006 {
         emrePage.settingsEmailTextBox.clear();
         emrePage.settingsEmailTextBox.sendKeys(newEmail);
     }
+    @Given("EG kullanici save butonuna basar ve degisiklikleri kaydeder")
+    public void eg_kullanici_save_butonuna_basar_ve_degisiklikleri_kaydeder() {
+        emrePage = new EmrePage();
+        emrePage.settingsSaveButton.click();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(emrePage.settingsDegisikliklerKaydedildiElement.isEnabled());
+    }
 }

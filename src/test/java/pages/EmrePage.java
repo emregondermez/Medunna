@@ -59,6 +59,15 @@ public class EmrePage {
   @FindBy(xpath = "//input[@name='email']")
   public WebElement settingsEmailTextBox;
 
+  @FindBy(xpath = "//span[normalize-space()='Save']")
+  public WebElement settingsSaveButton;
+
+
+  @FindBy(xpath = "//span[normalize-space()='Save']")
+  public WebElement settingsDegisikliklerKaydedildiElement;
+
+
+
 
 
 

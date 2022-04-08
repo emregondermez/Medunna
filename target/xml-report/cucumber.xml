@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.453">
-    <testcase classname="US06 TC02-03-04" name="_2" time="0.101">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given EG Kullanici medunna.com adresine gider...............................passed
-And EG Kullanici Account Menu ikonuna tiklar................................passed
-And EG Kullanici sign in secenegine tiklar..................................passed
-And EG Kullanici username kutusuna "DoctorEmr" girer........................passed
-And EG Kullanici Password kutusuna "Asdf1!" girer...........................passed
-And EG Kullanici sign in butonuna tiklar....................................passed
-And EG Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
-And EG Kullanici settings secenigine tiklar.................................passed
-And EG kullanici firstname kutusuna yeni "Doctor" yazar.....................undefined
-And EG kullanici lastname kutusuna yeni "Emr" yazar.........................skipped
-And EG kullanici email kutusuna yeni "asdf@gmail.com" yazar.................skipped
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="US06 TC02-03-04" name="_3" time="0.007">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.53">
+    <testcase classname="US07 TC01" name="hasta randevu alirken gecerli tarih girmelidir" time="0.127">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given EG Kullanici medunna.com adresine gider...............................passed
 And EG Kullanici Account Menu ikonuna tiklar................................passed
@@ -24,27 +8,33 @@ And EG Kullanici sign in secenegine tiklar..................................pass
 And EG Kullanici username kutusuna "PatientEmr" girer.......................passed
 And EG Kullanici Password kutusuna "Asdf1!" girer...........................passed
 And EG Kullanici sign in butonuna tiklar....................................passed
-And EG Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
-And EG Kullanici settings secenigine tiklar.................................passed
-And EG kullanici firstname kutusuna yeni "Patient" yazar....................undefined
-And EG kullanici lastname kutusuna yeni "Emr" yazar.........................skipped
-And EG kullanici email kutusuna yeni "asdfg1@gmail.com" yazar...............skipped
+And EG hasta MY PAGES elementine tiklar.....................................undefined
+And EG hasta Make an appointment secenegine tiklar..........................skipped
+And EG hasta telefon numarasi girer.........................................skipped
+And EG hasta EG hasta tarih olarak eski tarih"01.01.1995"girer..............skipped
+And EG hasta 'Appointment date can not be past date!' yazisini gorunur......skipped
+And EG hasta tarih olarak guncel tarih"02.02.2023"girer.....................skipped
+And EG hasta 'Appointment date can not be past date!' yazisini gormez.......skipped
+And EG hasta send an appointment request secenegine tiklar..................skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="US06 TC02-03-04" name="_4" time="0.003">
+    <testcase classname="US07 TC01" name="hasta randevu alirken gecerli tarih girmelidir 2" time="0.011">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given EG Kullanici medunna.com adresine gider...............................passed
 And EG Kullanici Account Menu ikonuna tiklar................................passed
 And EG Kullanici sign in secenegine tiklar..................................passed
-And EG Kullanici username kutusuna "StaffEmr" girer.........................passed
+And EG Kullanici username kutusuna "PatientEmr" girer.......................passed
 And EG Kullanici Password kutusuna "Asdf1!" girer...........................passed
 And EG Kullanici sign in butonuna tiklar....................................passed
-And EG Kullanici sag ust kosede bulunan kullanici ismine tiklar.............passed
-And EG Kullanici settings secenigine tiklar.................................passed
-And EG kullanici firstname kutusuna yeni "Staff" yazar......................undefined
-And EG kullanici lastname kutusuna yeni "Emr" yazar.........................skipped
-And EG kullanici email kutusuna yeni "asdfghjk@gmail.com" yazar.............skipped
+And EG hasta MY PAGES elementine tiklar.....................................undefined
+And EG hasta Make an appointment secenegine tiklar..........................skipped
+And EG hasta telefon numarasi girer.........................................skipped
+And EG hasta EG hasta tarih olarak eski tarih"02.14.1914"girer..............skipped
+And EG hasta 'Appointment date can not be past date!' yazisini gorunur......skipped
+And EG hasta tarih olarak guncel tarih"06.08.2022"girer.....................skipped
+And EG hasta 'Appointment date can not be past date!' yazisini gormez.......skipped
+And EG hasta send an appointment request secenegine tiklar..................skipped
 ]]>
         </failure>
     </testcase>

@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.53">
-    <testcase classname="US07 TC01" name="hasta randevu alirken gecerli tarih girmelidir" time="0.127">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.53">
+    <testcase classname="US07 TC02" name="HastaTarih sırası gün/ay/yıl  formatinda guncel tarih girer" time="0.116">
+        <system-out>
             <![CDATA[Given EG Kullanici medunna.com adresine gider...............................passed
 And EG Kullanici Account Menu ikonuna tiklar................................passed
 And EG Kullanici sign in secenegine tiklar..................................passed
 And EG Kullanici username kutusuna "PatientEmr" girer.......................passed
 And EG Kullanici Password kutusuna "Asdf1!" girer...........................passed
 And EG Kullanici sign in butonuna tiklar....................................passed
-And EG hasta MY PAGES elementine tiklar.....................................undefined
-And EG hasta Make an appointment secenegine tiklar..........................skipped
-And EG hasta telefon numarasi girer.........................................skipped
-And EG hasta EG hasta tarih olarak eski tarih"01.01.1995"girer..............skipped
-And EG hasta 'Appointment date can not be past date!' yazisini gorunur......skipped
-And EG hasta tarih olarak guncel tarih"02.02.2023"girer.....................skipped
-And EG hasta 'Appointment date can not be past date!' yazisini gormez.......skipped
-And EG hasta send an appointment request secenegine tiklar..................skipped
+And EG hasta MY PAGES elementine tiklar.....................................passed
+And EG hasta Make an appointment secenegine tiklar..........................passed
+And EG hasta telefon numarasi girer.........................................passed
+And EG hasta tarih olarak guncel tarih "02.02.2023" girer...................passed
+Then EG kullanici uygulamayi kapatir........................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="US07 TC01" name="hasta randevu alirken gecerli tarih girmelidir 2" time="0.011">
+    <testcase classname="US07 TC02" name="Hasta Tarih sırası gün/ay/yıl  formatinda guncel tarih girer" time="0.022">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given EG Kullanici medunna.com adresine gider...............................passed
 And EG Kullanici Account Menu ikonuna tiklar................................passed
@@ -27,14 +24,12 @@ And EG Kullanici sign in secenegine tiklar..................................pass
 And EG Kullanici username kutusuna "PatientEmr" girer.......................passed
 And EG Kullanici Password kutusuna "Asdf1!" girer...........................passed
 And EG Kullanici sign in butonuna tiklar....................................passed
-And EG hasta MY PAGES elementine tiklar.....................................undefined
-And EG hasta Make an appointment secenegine tiklar..........................skipped
-And EG hasta telefon numarasi girer.........................................skipped
-And EG hasta EG hasta tarih olarak eski tarih"02.14.1914"girer..............skipped
-And EG hasta 'Appointment date can not be past date!' yazisini gorunur......skipped
-And EG hasta tarih olarak guncel tarih"06.08.2022"girer.....................skipped
-And EG hasta 'Appointment date can not be past date!' yazisini gormez.......skipped
-And EG hasta send an appointment request secenegine tiklar..................skipped
+And EG hasta MY PAGES elementine tiklar.....................................passed
+And EG hasta Make an appointment secenegine tiklar..........................passed
+And EG hasta telefon numarasi girer.........................................passed
+And EG hasta yil-ay-gun formatinda tarih girer..............................undefined
+And EG hasta Appointment date can not be past date! yazisini gorunur........skipped
+Then EG kullanici uygulamayi kapatir........................................skipped
 ]]>
         </failure>
     </testcase>

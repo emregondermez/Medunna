@@ -12,13 +12,13 @@ Feature: US07 TC01
     And EG hasta MY PAGES elementine tiklar
     And EG hasta Make an appointment secenegine tiklar
     And EG hasta telefon numarasi girer
-    And EG hasta EG hasta tarih olarak eski tarih"<eskiTarih>"girer
-    And EG hasta 'Appointment date can not be past date!' yazisini gorunur
-    And EG hasta tarih olarak guncel tarih"<guncelTarih>"girer
-    And EG hasta 'Appointment date can not be past date!' yazisini gormez
+    And EG hasta EG hasta tarih olarak eski tarih "<eskiTarih>" girer
+   And EG hasta Appointment date can not be past date! yazisini gorunur
+    And EG hasta tarih olarak guncel tarih "<guncelTarih>" girer
     And EG hasta send an appointment request secenegine tiklar
+    Then EG kullanici uygulamayi kapatir
 
     Examples: test-data
     |eskiTarih|guncelTarih|
     |01.01.1995  |02.02.2023|
-    |02.14.1914            |06.08.2022 |
+    |02.14.1914  |06.08.2022 |

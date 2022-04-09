@@ -66,6 +66,23 @@ public class EmrePage {
   @FindBy(xpath = "//span[normalize-space()='Save']")
   public WebElement settingsDegisikliklerKaydedildiElement;
 
+  @FindBy(xpath = "//span[normalize-space()='Make an Appointment']")
+  public WebElement makeAnAppointment;
+
+
+  @FindBy(xpath = "//input[@id='phone']")
+  public WebElement phoneNumberTextBox;
+
+
+  @FindBy(xpath = "//span[normalize-space()='Appointment date can not be past date!']")
+  public WebElement gecersizTarihUyarisi;
+
+  @FindBy(xpath = "//button[@id='register-submit']")
+  public WebElement sendAnAppointmentRequest;
+
+  @FindBy(xpath = "//input[@id='appoDate']")
+  public WebElement dateTextBox;
+
 
 
 

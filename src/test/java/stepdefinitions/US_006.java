@@ -8,90 +8,90 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class US_006 {
-    EmrePage emrePage;
+    Appointments appointments;
 
     @Given("EG Kullanici medunna.com adresine gider")
     public void eg_kullanici_medunna_com_adresine_gider() {
 
         Driver.getDriver().get(ConfigReader.getProperty("medunnaUrl"));
-        emrePage = new EmrePage();
-        Assert.assertTrue(emrePage.welcomeToMedunna.isEnabled());
+        appointments = new Appointments();
+        Assert.assertTrue(appointments.welcomeToMedunna.isEnabled());
 
     }
 
 
     @Given("EG Kullanici Account Menu ikonuna tiklar")
     public void eg_kullanici_account_menu_ikonuna_tiklar() {
-        emrePage = new EmrePage();
-        emrePage.girisIkonu.click();
+        appointments = new Appointments();
+        appointments.girisIkonu.click();
 
     }
 
     @Given("EG Kullanici sign in secenegine tiklar")
     public void eg_kullanici_sign_in_secenegine_tiklar() {
-        emrePage = new EmrePage();
-        emrePage.anaSayfaSignIn.click();
-        Assert.assertTrue(emrePage.signInMenusu.isEnabled());
+        appointments = new Appointments();
+        appointments.anaSayfaSignIn.click();
+        Assert.assertTrue(appointments.signInMenusu.isEnabled());
     }
 
     @Given("EG Kullanici username kutusuna {string} girer")
     public void eg_kullanici_username_kutusuna_girer(String username) {
-        emrePage = new EmrePage();
-        emrePage.girisUsernameTextBox.sendKeys(username);
+        appointments = new Appointments();
+        appointments.girisUsernameTextBox.sendKeys(username);
     }
 
     @Given("EG Kullanici Password kutusuna {string} girer")
     public void eg_kullanici_password_kutusuna_girer(String password) {
-        emrePage = new EmrePage();
-        emrePage.girisPasswordTextBox.sendKeys(password);
+        appointments = new Appointments();
+        appointments.girisPasswordTextBox.sendKeys(password);
 
         ReusableMethods.waitFor(2);
     }
 
     @Given("EG Kullanici sign in butonuna tiklar")
     public void eg_kullanici_sign_in_butonuna_tiklar() {
-        emrePage = new EmrePage();
-        emrePage.girisSignInButton.click();
-        Assert.assertTrue(emrePage.myPagesElementi.isEnabled());
+        appointments = new Appointments();
+        appointments.girisSignInButton.click();
+        Assert.assertTrue(appointments.myPagesElementi.isEnabled());
         ReusableMethods.waitFor(3);
 
     }
 
     @Given("EG Kullanici sag ust kosede bulunan kullanici ismine tiklar")
     public void eg_kullanici_sag_ust_kosede_bulunan_kullanici_ismine_tiklar() {
-        emrePage = new EmrePage();
-        emrePage.sagUstKullaniciAdi.click();
-        Assert.assertTrue(emrePage.settingsButton.isEnabled());
+        appointments = new Appointments();
+        appointments.sagUstKullaniciAdi.click();
+        Assert.assertTrue(appointments.settingsButton.isEnabled());
     }
 
     @Given("EG Kullanici settings secenigine tiklar")
     public void eg_kullanici_settings_secenigine_tiklar() {
-        emrePage = new EmrePage();
-        emrePage.settingsButton.click();
-        Assert.assertTrue(emrePage.userSettingsFor.isEnabled());
+        appointments = new Appointments();
+        appointments.settingsButton.click();
+        Assert.assertTrue(appointments.userSettingsFor.isEnabled());
         ReusableMethods.waitFor(2);
 
     }
 
     @Given("EG Firstname kutusundaki isim kayit olurken girilen {string} olmali")
     public void eg_firstname_kutusundaki_isim_kayit_olurken_girilen_olmali(String firstname) {
-        emrePage = new EmrePage();
-        String actualFirstname = emrePage.settingsFirstnameTextBox.getAttribute("value");
+        appointments = new Appointments();
+        String actualFirstname = appointments.settingsFirstnameTextBox.getAttribute("value");
         System.out.println(actualFirstname);
         Assert.assertEquals(actualFirstname, firstname);
     }
 
     @Given("EG last name  kutusundaki soy isim kayit olurken girilen {string} olmali")
     public void eg_last_name_kutusundaki_soy_isim_kayit_olurken_girilen_olmali(String lastname) {
-        emrePage = new EmrePage();
-        String actualLastname = emrePage.settingsLastnameTextBox.getAttribute("value");
+        appointments = new Appointments();
+        String actualLastname = appointments.settingsLastnameTextBox.getAttribute("value");
         Assert.assertEquals(actualLastname, lastname);
     }
 
     @Given("EG email kutusundaki mail adresi  kayit olurken girilen {string} olmali")
     public void eg_email_kutusundaki_mail_adresi_kayit_olurken_girilen_olmali(String email) {
-        emrePage = new EmrePage();
-        String actualEmail = emrePage.settingsEmailTextBox.getAttribute("value");
+        appointments = new Appointments();
+        String actualEmail = appointments.settingsEmailTextBox.getAttribute("value");
         Assert.assertEquals(actualEmail, email);
     }
 
@@ -103,33 +103,33 @@ public class US_006 {
 
     @Given("EG kullanici firstname kutusuna yeni {string} yazar")
     public void eg_kullanici_firstname_kutusuna_yeni_yazar(String newFirstname) {
-        emrePage = new EmrePage();
-      emrePage.settingsFirstnameTextBox.click();
-      emrePage.settingsFirstnameTextBox.clear();
-      emrePage.settingsFirstnameTextBox.sendKeys(newFirstname);
+        appointments = new Appointments();
+      appointments.settingsFirstnameTextBox.click();
+      appointments.settingsFirstnameTextBox.clear();
+      appointments.settingsFirstnameTextBox.sendKeys(newFirstname);
 
     }
 
     @Given("EG kullanici lastname kutusuna yeni {string} yazar")
     public void eg_kullanici_lastname_kutusuna_yeni_yazar(String newLastname) {
-        emrePage = new EmrePage();
-        emrePage.settingsLastnameTextBox.click();
-        emrePage.settingsLastnameTextBox.clear();
-        emrePage.settingsLastnameTextBox.sendKeys(newLastname);
+        appointments = new Appointments();
+        appointments.settingsLastnameTextBox.click();
+        appointments.settingsLastnameTextBox.clear();
+        appointments.settingsLastnameTextBox.sendKeys(newLastname);
     }
 
     @Given("EG kullanici email kutusuna yeni {string} yazar")
     public void eg_kullanici_email_kutusuna_yeni_yazar(String newEmail) {
-        emrePage = new EmrePage();
-        emrePage.settingsEmailTextBox.click();
-        emrePage.settingsEmailTextBox.clear();
-        emrePage.settingsEmailTextBox.sendKeys(newEmail);
+        appointments = new Appointments();
+        appointments.settingsEmailTextBox.click();
+        appointments.settingsEmailTextBox.clear();
+        appointments.settingsEmailTextBox.sendKeys(newEmail);
     }
     @Given("EG kullanici save butonuna basar ve degisiklikleri kaydeder")
     public void eg_kullanici_save_butonuna_basar_ve_degisiklikleri_kaydeder() {
-        emrePage = new EmrePage();
-        emrePage.settingsSaveButton.click();
+        appointments = new Appointments();
+        appointments.settingsSaveButton.click();
         ReusableMethods.waitFor(2);
-        Assert.assertTrue(emrePage.settingsDegisikliklerKaydedildiElement.isEnabled());
+        Assert.assertTrue(appointments.settingsDegisikliklerKaydedildiElement.isEnabled());
     }
 }

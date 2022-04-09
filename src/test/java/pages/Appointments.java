@@ -5,11 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class EmrePage {
+public class Appointments {
 
 
 
-  public EmrePage(){
+  public Appointments(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
